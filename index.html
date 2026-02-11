@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polestar 4 - Accueil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/polestar-logo.png" type="image/png">
+</head>
+<body>
+  <section class="hero">
+    <!-- Background Image -->
+    <img class="bg" src="img/home.jpg" alt="Polestar 4 Vue Avant">
+
+    <!-- Header avec éléments centrés -->
+    <header>
+      <!-- Logo à gauche -->
+      <div class="icon-left">
+        <a href="index.html"><img src="img/polestar-logo.png" alt="Polestar Logo" width="50" style="padding-top: 20px"></a>
+      </div>
+
+      <!-- Navigation au centre -->
+      <nav class="nav">
+        <a href="index.html">[Découvrez la Polestar 4]</a>
+        <a href="#configurer">[Configurer]</a>
+        <a href="#conditions">[Conditions spéciales]</a>
+        <a href="#livraison">[Livraison Rapide]</a>
+      </nav>
+
+      <!-- Icône utilisateur à droite -->
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-3-3.87"></path>
+        <path d="M4 21v-2a4 4 0 0 1 3-3.87"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg></a>
+    </header>
+
+    <!-- Big Overlay Text -->
+    <div class="overlay-title">POLESTAR4</div>
+
+    <!-- Bottom Texts -->
+    <div class="footer-left">
+      <p>L'aérodynamisme d'un coupé.<br>
+      L'espace d'un SUV.<br>
+      L'innovation de l'ère électrique.</p>
+    </div>
+    <div class="footer-right">
+      <p>Entièrement équipée dès 61 400 €*</p>
+    </div>
+
+    <!-- CTA Card -->
+    <div class="cta-card">
+      <img src="img/polestar-profile.jpg" alt="Polestar 4 Profile">
+      <div class="cta-card-content">
+        <p>[POLESTAR 4]</p>
+        <a href="booking.html"><h2>RÉSERVER UN ESSAI<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem;">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </h2></a>
+      </div>
+    </div>
+
+
+<!-- deuxieme page -->
+  </section>
+  <section class="performance-section">
+    <div class="performance-title">PERFORMANCE</div>
+    <div class="performance-content-wrapper">
+      <!-- Bloc texte au-dessus de la vidéo, aligné avec la 3e colonne -->
+      <div class="performance-text-container">
+        <div class="performance-text">
+          <h1>L'entrée dans l'ère électrique</h1>
+          <p>Lorem ipsum dolor sit amet consectetur. Platea et curabitur risus aliquam tristique sit vel urna erat. Cras pellentesque vitae lorem nibh faucibus eget. Lectus quisque nibh tempor lorem. Tellus quisque mauris tincidunt faucibus tincidunt ipsum fermentum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="performance-grid">
+      <div class="performance-recharge">
+        <!-- Contenu de la section recharge -->
+         <img src="img/polestar4-top.png" alt="Polestar 4 Recharge" class="performance-recharge-img">
+
+      </div>
+      <div class="performance-autonomie">
+        <!-- Contenu de la section autonomie -->
+         <img src="img/polestar4-face.png" alt="Polestar 4 Autonomie" class="performance-autonomie-img">
+      </div>
+      <div class="performance-power">
+        <div class="performance-power-content">
+          <div class="performance-power-video">
+            <video id="performanceVideo" src="vid/polestar4vid.mp4" class="performance-power-video" muted playsinline></video>
+          </div>
+          
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const video = document.getElementById('performanceVideo');
+              
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    video.play().catch(error => {
+                      // Gestion des erreurs de lecture automatique
+                      console.log('La lecture automatique a été bloquée:', error);
+                    });
+                  } else {
+                    video.pause();
+                  }
+                });
+              }, {
+                threshold: 0.5 // La vidéo commencera à jouer quand 50% est visible
+              });
+              
+              observer.observe(video);
+            });
+          </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="performance-grid-bottom">
+      <!-- Premier élément (sous performance-recharge) -->
+      <div class="performance-recharge-content">
+        <h2>Temps de recharge</h2>
+        <p>30 MIN</p>
+      </div>
+      <!-- Deuxième élément (sous performance-autonomie) -->
+      <div class="performance-autonomie-content">
+        <h2>Autonomie jusqu'à</h2>
+        <p>500 KM</p>
+      </div>
+      <!-- Troisième élément (sous performance-power) -->
+      <div class="performance-power-details">
+          <h2>puissance</h2>
+          <p>400 KW / 544 HP</p>
+      </div>
+    </div>
+    
+    <!-- Lien "En savoir plus" avec flèche -->
+    <div class="savoir-plus-container">
+      <a href="#" class="savoir-plus-link">En savoir plus
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="recharge-section">
+    <div class="recharge-content">
+      <div class="recharge-title">RÉSEAU DE RECHARGE</div>
+  
+      <h2>Polestar 4 se recharge<br>rapidement</h2>
+  
+      <p>
+        et où que ce soit avec plus de 600 fournisseurs. Les services Google³ intégrés affichent des possibilités de recharge pratiques en fonction du niveau de batterie.
+      </p>
+  
+      <div class="recharge-logos">
+        <img src="img/tesla.png" alt="Tesla Supercharger">
+        <img src="img/fastned.png" alt="Fastned">
+        <img src="img/totalenergies.png" alt="TotalEnergies">
+        <img src="img/ionity.png" alt="Ionity">
+        <img src="img/allego.png" alt="Allego">
+        <img src="img/recharge.png" alt="Recharge">
+      </div>
+    </div>
+  </section>
+
+<section class="video-carousel">
+  <div class="interior-title">INTÉRIEUR</div>
+<div class="caption">
+  <h3>Intérieur</h3>
+  <p>
+    Tirant son inspiration de la mode et des vêtements de sport, la Polestar 4 associe des tissus au toucher supérieur et de grande qualité, à un éclairage intégré qui crée un habitacle intimiste mais néanmoins spacieux.
+  </p>
+</div>
+
+  <div class="video-container active">
+    <video muted autoplay loop playsinline>
+      <source src="vid/polestar4-interior.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="video-container">
+    <video muted autoplay loop playsinline>
+      <source src="vid/interior-1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="vid/interior-2.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="vid/interior-3.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="vid/interior-4.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="thumbnails">
+    <img src="img/carrousel/polestar4-interior.png" data-index="0" class="active"></img>
+    <img src="img/carrousel/interior-1.png" data-index="1"></img>
+    <img src="img/carrousel/interior-2.png" data-index="2"></img>
+    <img src="img/carrousel/interior-3.png" data-index="3"></img>
+    <img src="img/carrousel/interior-4.png" data-index="4"></img>
+  </div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const videoContainers = document.querySelectorAll('.video-container');
+    const buttons = document.querySelectorAll('.thumbnails img');
+
+    // Function to show video by index
+    function showVideo(index) {
+      // Hide all videos and remove active state from buttons
+      videoContainers.forEach(vc => vc.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+      
+      // Show selected video and activate corresponding button
+      if (videoContainers[index]) {
+        videoContainers[index].classList.add('active');
+        buttons[index].classList.add('active');
+      }
+    }
+
+    // Add click event to thumbnails
+    buttons.forEach((btn, index) => {
+      btn.addEventListener('click', () => showVideo(index));
+    });
+
+    // Initialize first video as active
+    showVideo(0);
+  });
+</script>
+
+<section class="google-section">
+  
+  <div class="google-text">
+    <div class="google-title">FONCTIONNALITÉS</div>
+    <img id="google-1" src="img/fonction/google-1.png" alt="Vue intérieure avec Google Maps">
+    <img id="google-2" src="img/fonction/google-2.png" alt="Écran tactile Google intégré"> 
+    <img id="google-3" src="img/fonction/google-3.png" alt="Climatisation intelligente">
+    <video id="google-4" src="img/fonction/google-4.mp4" alt="Toit panoramique" autoplay muted loop playsinline></video>
+    <img id="google-5" src="img/fonction/google-5.png" alt="Commande rotative digitale">
+    <img id="google-6" src="img/fonction/google-6.jpg" alt="Affichage tête haute">
+    <h2><span>GOOGLE<sup>3</sup></span></h2>
+    <p>
+      Grâce à l’intégration des services Google<sup>3</sup> et des applications les plus courantes, la Polestar 4 correspond parfaitement à vos habitudes numériques.
+    </p>
+  </div>
+</section>
+
+<section class="video-background-section">
+  <video autoplay muted loop playsinline class="video-bg">
+    <source src="vid/polestar-4-fin.mp4" type="video/mp4" />
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
+
+  <div class="cta-grid">
+      <div class="cta-item">
+      <a href="booking.html"><h3>Réservez un essai →</h3>
+        <p>Choisissez la voiture, le lieu et l’heure, et faites l’expérience de la performance électrique durable depuis le siège du conducteur.</p>
+      </a>
+      </div>
+      <div class="cta-item">
+      <a href="#"><h3>Configurer →</h3>
+        <p>Configurez vous-même votre Polestar pour qu’elle vous ressemble, des jantes à la couleur des sièges, en passant par les options.</p>
+      </a>
+      </div>
+      <div class="cta-item">
+      <a href="#"><h3>Acheter →</h3>
+        <p>Véhicules neufs et prêts à prendre la route. Entrez les spécifications souhaitées pour trouver votre voiture.</p>
+      </a>
+      </div>
+  </div>
+</section>
+
+<footer class="polestar-footer">
+  <div class="footer-top">
+    <div class="newsletter">
+      <h2>Restez au fait de toutes les actualités de Polestar</h2>
+      <a href="#" class="subscribe-link">S’abonner ↘</a>
+    </div>
+
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Extras</a></li>
+          <li><a href="#">Expérience</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Assistance</h4>
+        <ul>
+          <li><a href="#">Comment acheter</a></li>
+          <li><a href="#">Méthodes de financement</a></li>
+          <li><a href="#">Propriété</a></li>
+          <li><a href="#">Recharge</a></li>
+          <li><a href="#">Point d’entretien</a></li>
+          <li><a href="#">Assistance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>À propos</h4>
+        <ul>
+          <li><a href="#">Événements</a></li>
+          <li><a href="#">Nouvelles</a></li>
+          <li><a href="#">Durabilité</a></li>
+          <li><a href="#">À propos de Polestar</a></li>
+          <li><a href="#">Offre d’emploi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Designed by</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/octalise.uiux?igsh=MmVkbHAwODZ2Z25j">Instagram</a></li>
+          <li><a href="https://www.behance.net/anoucklefebvre">Behance</a></li>
+          <li><a href="https://www.linkedin.com/in/anouck-lefebvre/">LinkedIn</a></li>
+          <li><a href="https://www.twitch.tv/octalise">Twitch</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Polestar © 2025 Tous droits réservés</p>
+    <ul class="legal-links">
+      <li><a href="#">Avis juridiques</a></li>
+      <li><a href="#">Éthique</a></li>
+      <li><a href="#">Confidentialité</a></li>
+      <li><a href="#">Cookies</a></li>
+      <li><a href="#">Déclaration d’accessibilité</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+  
+</body>
+</html>
